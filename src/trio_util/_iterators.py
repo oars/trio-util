@@ -1,5 +1,8 @@
 # NOTE: test-requirements pylint upgrade is needed for python3.13, but
-#   the upgrade is blocked by python3.8 support.
+#   the upgrade is blocked by python3.8 support.``
+# disable import error temporarily until pylint fixed colections.abc issue with python 3.13 and CI is updated.
+# https://github.com/pylint-dev/pylint/issues/10112
+# pylint: disable=import-error
 from collections.abc import AsyncIterator  # pylint: disable=no-name-in-module
 
 import trio
